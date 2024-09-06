@@ -1,0 +1,35 @@
+.gallery {
+    padding: 3rem 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+  
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    &__item {
+      width: calc(100% / 4 - 1rem);
+      height: auto;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+  
+      @media (max-width: 1024px) {
+        width: calc(100% / 3 - 1rem);
+      }
+  
+      @media (max-width: 768px) {
+        width: calc(100% / 2 - 1rem);
+      }
+  
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+    }
+  }
